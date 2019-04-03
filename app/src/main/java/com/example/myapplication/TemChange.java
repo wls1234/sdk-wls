@@ -7,23 +7,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView out1;
+public class TemChange extends AppCompatActivity implements View.OnClickListener{
     TextView out;
-   EditText edit;
+    EditText edit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second);
+        setContentView(R.layout.activity_temchange);
         TextView out1=findViewById(R.id.textView2);
-       EditText edit=findViewById(R.id.tem1);
-       Button btn=findViewById(R.id.button);
-       TextView out=findViewById(R.id.textView3);
+        EditText edit=findViewById(R.id.tem1);
+        Button btn=findViewById(R.id.button);
+        TextView out=findViewById(R.id.textView3);
         btn.setOnClickListener(this);
     }
-
-
-    @Override
     public void onClick(View v) {
         String str=edit.getText().toString();
         float tem1=Float.parseFloat(str);
@@ -31,7 +27,3 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         out.setText("结果："+tem);
     }
 }
-
-
-
-
